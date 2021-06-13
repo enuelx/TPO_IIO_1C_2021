@@ -11,21 +11,22 @@ public class ControllerAdministrativo {
 	public ControllerAdministrativo() {
 	}
 
-
+	// Instancia de Objetos Base
+	Proveedor pv = new Proveedor();
 
 
 	/**
 	 * @param value
 	 */
 	public void setCUIT(int value) {
-		// TODO implement here
+		pv.setCUIT(value);
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setResponsabilidadIva(String value) {
-		// TODO implement here
+		pv.setResponsabilidadIva(value);
 	}
 
 	/**

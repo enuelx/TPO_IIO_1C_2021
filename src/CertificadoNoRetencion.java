@@ -1,7 +1,8 @@
 import java.time.LocalDate;
+import enums.TipoRetencion;
 import java.util.*;
 
-public class CertificadoNoRetencion<TipoRetencion> {
+public class CertificadoNoRetencion {
 
 	/**
 	 * Default constructor
@@ -34,68 +35,63 @@ public class CertificadoNoRetencion<TipoRetencion> {
 	 * @return
 	 */
 	public int getIdCertificado() {
-		// TODO implement here
-		return 0;
+		return this.idCertificado;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setIdCertificado(int value) {
-		// TODO implement here
+		this.idCertificado = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public LocalDate getFechaInicio() {
-		// TODO implement here
-		return null;
+		return this.fechaInicio;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setFechaInicio(LocalDate value) {
-		// TODO implement here
+		this.fechaInicio = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public LocalDate getFechaFin() {
-		// TODO implement here
-		return null;
+		return this.fechaFin;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setFechaFin(LocalDate value) {
-		// TODO implement here
+		this.fechaFin = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public TipoRetencion getTipoImpuesto() {
-		// TODO implement here
-		return null;
+		return this.tipoImpuesto;
 	}
 
 	/**
-	 * @param <TipoRetencion>
 	 * @param value
 	 */
-	public <TipoRetencion> void setTipoImpuesto (TipoRetencion value) {
-		// TODO implement here
+	public void setTipoImpuesto (TipoRetencion value) {
+		this.tipoImpuesto = value;
 	}
 
 	/**
 	 * 
 	 */
-	public void calcularPorcentaje() {
-		// TODO implement here
+	public double calcularPorcentaje() {
+		return 0.0;
 	}
 
 }
