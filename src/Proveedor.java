@@ -122,13 +122,14 @@ public class Proveedor {
 	 */
 	public int getCUIT() {
 		// TODO implement here
-		return 0;
+		return this.CUIT;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setCUIT(int value) {
+		this.CUIT=value;
 		// TODO implement here
 	}
 

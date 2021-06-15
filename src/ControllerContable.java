@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.util.*;
 
+
 /**
  * 
  */
@@ -45,8 +46,20 @@ public class ControllerContable {
 	 * @return
 	 */
 	public CuentaCorriente reporteDeCuenta(int cuit) {
+		CuentaCorriente cuenta = new CuentaCorriente();
+		if (cuenta.obtenerCuitProveedor(cuit) == true) {
+			System.out.println("Deuda del Proveedor: ");
+			System.out.println(cuenta.getDeuda());
+			System.out.println("Documentos Recibidos: ");
+			System.out.println(cuenta.getDocRecibidos());
+			System.out.println("Documentos Impagos: ");
+			System.out.println(cuenta.getDocInpagos());
+			System.out.println("Documentos Recibidos: ");
+			System.out.println(cuenta.getPagosRealizados());
+		}
 		// TODO implement here
 		return null;
+		
 	}
 
 	/**
