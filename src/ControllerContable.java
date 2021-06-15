@@ -12,9 +12,12 @@ public class ControllerContable {
 	public ControllerContable() {
 	}
 
-	/**
-	 * 
-	 */
+	//Parametros
+	
+	private Set<OrdenDePago> ordenesDePago = new TreeSet <OrdenDePago>();
+	
+	
+	
 	public void calcularGanancia() {
 		// TODO implement here
 	}
@@ -82,7 +85,21 @@ public class ControllerContable {
 	/**
 	 * 
 	 */
-	public void getOrdenesDePago() {
+	
+	public void setOrdenesDePago(OrdenDePago value) {
+		
+		this.ordenesDePago.add(value);
+		
+	}
+	
+	
+	
+	
+	/**
+	 * 
+	 */
+	public Set<OrdenDePago> getOrdenesDePago() {
+		return this.ordenesDePago;
 		// TODO implement here
 	}
 
