@@ -25,3 +25,9 @@ hs_err_pid*
 # IDE
 .idea
 .vscode
+.code-workspace
+out/
+.idea_modules
+*.iml
+*.ipr
+*.iws
