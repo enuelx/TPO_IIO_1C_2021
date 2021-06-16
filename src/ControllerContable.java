@@ -27,19 +27,9 @@ public class ControllerContable {
 	 * @param dia 
 	 * @return
 	 */
-	Factura factu = new Factura();
-	ArrayList<String> lista1 = new ArrayList<String>();
 	public List <Factura> facturasPorDia(LocalDate dia) {
-		while Factura{
-			factu.getFechaEmision();
-			if LocalDate == factu.getFechaEmision(){
-				if 
-					
-				}
-			}
-		}
-		
-		return;
+		// TODO implement here
+		return null;
 	}
 
 	/**
