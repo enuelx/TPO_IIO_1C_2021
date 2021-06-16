@@ -138,13 +138,14 @@ public class Proveedor {
 	 */
 	public String getResponsabilidadIva() {
 		// TODO implement here
-		return "";
+		return this.responsabilidadIva;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setResponsabilidadIva(String value) {
+		this.responsabilidadIva=value;
 		// TODO implement here
 	}
 
@@ -153,13 +154,14 @@ public class Proveedor {
 	 */
 	public String getRazonSocial() {
 		// TODO implement here
-		return "";
+		return this.razonSocial;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setRazonSocial(String value) {
+		this.razonSocial=value;
 		// TODO implement here
 	}
 
@@ -168,13 +170,14 @@ public class Proveedor {
 	 */
 	public String getNombre() {
 		// TODO implement here
-		return "";
+		return this.nombre;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setNombre(String value) {
+		this.nombre=value;
 		// TODO implement here
 	}
 
@@ -183,13 +186,14 @@ public class Proveedor {
 	 */
 	public String getDireccion() {
 		// TODO implement here
-		return "";
+		return this.direccion;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setDireccion(String value) {
+		this.direccion=value;
 		// TODO implement here
 	}
 
@@ -198,13 +202,14 @@ public class Proveedor {
 	 */
 	public int getTelefono() {
 		// TODO implement here
-		return 0;
+		return this.telefono;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setTelefono(int value) {
+		this.telefono=value;
 		// TODO implement here
 	}
 
@@ -213,13 +218,14 @@ public class Proveedor {
 	 */
 	public String getEmail() {
 		// TODO implement here
-		return null;
+		return this.email;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setEmail(String value) {
+		this.email=value;
 		// TODO implement here
 	}
 
@@ -228,13 +234,14 @@ public class Proveedor {
 	 */
 	public double getIngresosBrutos() {
 		// TODO implement here
-		return 0.0d;
+		return this.ingresosBrutos;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setIngresosBrutos(double value) {
+		this.ingresosBrutos=value;
 		// TODO implement here
 	}
 
@@ -243,13 +250,14 @@ public class Proveedor {
 	 */
 	public LocalDate getInicioActividades() {
 		// TODO implement here
-		return null;
+		return this.inicioActividades;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setInicioActividades(LocalDate value) {
+		this.inicioActividades=value;
 		// TODO implement here
 	}
 
@@ -258,7 +266,7 @@ public class Proveedor {
 	 */
 	public List<Rubro> getRubros() {
 		// TODO implement here
-		return null;
+		return this.rubros;
 	}
 
 	/**
@@ -288,7 +296,7 @@ public class Proveedor {
 	 */
 	public List<CertificadoNoRetencion> getCertificado() {
 		// TODO implement here
-		return null;
+		return this.certificado;
 	}
 
 	/**
@@ -303,13 +311,14 @@ public class Proveedor {
 	 */
 	public CuentaCorriente getCuentaCorriente() {
 		// TODO implement here
-		return null;
+		return this.cuentaCorriente;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setCuentaCorriente(CuentaCorriente value) {
+		this.cuentaCorriente=value;
 		// TODO implement here
 	}
 
@@ -318,13 +327,14 @@ public class Proveedor {
 	 */
 	public Double getTopeDeuda() {
 		// TODO implement here
-		return null;
+		return this.topeDeuda;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setTopeDeuda(Double value) {
+		this.topeDeuda=value;
 		// TODO implement here
 	}
 
