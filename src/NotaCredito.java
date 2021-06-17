@@ -29,8 +29,8 @@ public class NotaCredito extends Documento {
 	 * @return
 	 */
 	public float getIvaDiscriminado() {
-		// TODO implement here
-		return 0.0f;
+		
+		return this.ivaDiscriminado;
 	}
 
 	/**
@@ -44,15 +44,15 @@ public class NotaCredito extends Documento {
 	 * @return
 	 */
 	public Factura getFacturaCancelada() {
-		// TODO implement here
-		return null;
+		
+		return this.facturaCancelada;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setFacturaCancelada(Factura value) {
-		// TODO implement here
+		this.facturaCancelada = value;
 	}
 
 }

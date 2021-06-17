@@ -15,9 +15,9 @@ public class ControllerContable {
 
 	//Parametros
 	
-	private Set<OrdenDePago> ordenesDePago = new TreeSet <OrdenDePago>();
+	private ArrayList<OrdenDePago> ordenesDePago = new ArrayList <OrdenDePago>() ;
 	
-	
+
 	
 	public void calcularGanancia() {
 		// TODO implement here
@@ -99,19 +99,43 @@ public class ControllerContable {
 	 * 
 	 */
 	
-	public void setOrdenesDePago(OrdenDePago value) {
+	
+	
+public void setOrdenesDePago(OrdenDePago value) {
 		
-		this.ordenesDePago.add(value);
+		if (ordenNueva(value, this.ordenesDePago)) {
+			this.ordenesDePago.add(value);
+		}
+		else {
+			System.out.println("Esta Orden ya existe");
+		}
+		
 		
 	}
 	
-	
+
+
+	public Boolean ordenNueva(OrdenDePago orden, ArrayList<OrdenDePago> listaOrden) {
+		
+		Iterator iter1 = listaOrden.iterator();
+		OrdenDePago aux; 
+		
+		while (iter1.hasNext()) {
+			
+			aux = (OrdenDePago) iter1.next();
+			if (orden.getNumero() == aux.getNumero()) {
+				return false;
+			}
+		}
+		return true;
+			
+		}
 	
 	
 	/**
 	 * 
 	 */
-	public Set<OrdenDePago> getOrdenesDePago() {
+	public List<OrdenDePago> getOrdenesDePago() {
 		return this.ordenesDePago;
 		// TODO implement here
 	}
