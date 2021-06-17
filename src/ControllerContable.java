@@ -98,8 +98,16 @@ public class ControllerContable {
 	 * @return
 	 */
 	public List<CuentaCorriente> totalDeudaPorProveedor() {
-		// TODO implement here
-		return null;
+		CuentaCorriente cuen = new CuentaCorriente();
+		ArrayList<CuentaCorriente> lcuen= new ArrayList<CuentaCorriente>();
+		for(int i=0; i<10; i++) {
+			cuen.getProveedor().getCUIT();
+			cuen.getDeuda();
+			lcuen.add(cuen);
+		
+		}
+		System.out.println(lcuen);
+		return lcuen;
 	}
 
 	/**

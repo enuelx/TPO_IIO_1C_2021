@@ -13,5 +13,6 @@ public class App {
         System.out.println(p1.getCUIT());
         ControllerContable usuario = new ControllerContable();
         usuario.reporteDeCuenta(0);
+        usuario.totalDeudaPorProveedor();
     }
 }
