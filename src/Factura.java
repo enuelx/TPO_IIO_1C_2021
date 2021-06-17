@@ -36,15 +36,14 @@ public class Factura extends Documento {
 	 * @return
 	 */
 	public int obtenerProveedorCuit() {
-		// TODO implement here
-		return 0;
+		return this.getProveedorCuit();
 	}
 
 	/**
 	 * 
 	 */
 	public void getCuitProveedorCompra() {
-		// TODO implement here
+		
 	}
 
 }

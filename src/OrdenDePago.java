@@ -62,7 +62,7 @@ public class OrdenDePago {
 	
 	
 	public void setMontoXCancelar(float montoXCancelar) {
-		// SE TIENE QUE DESARROLLAR;
+		this.montoXCancelar = montoXCancelar;
 	}
 	
 	

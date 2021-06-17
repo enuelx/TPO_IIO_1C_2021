@@ -15,9 +15,9 @@ public class ControllerContable {
 
 	//Parametros
 	
-	private Set<OrdenDePago> ordenesDePago = new TreeSet <OrdenDePago>();
+	private ArrayList<OrdenDePago> ordenesDePago = new ArrayList <OrdenDePago>() ;
 	
-	
+
 	
 	public void calcularGanancia() {
 		// TODO implement here
@@ -27,9 +27,23 @@ public class ControllerContable {
 	 * @param dia 
 	 * @return
 	 */
-	public List <Factura> facturasPorDia(LocalDate dia) {
-		// TODO implement here
-		return null;
+	
+	public ArrayList<Factura> facturasPorDia(LocalDate dia) {
+		Factura factu = new Factura();
+		ArrayList<Factura> lfactu= new ArrayList<Factura>();
+		int indice=0;
+		//falta definir lista de facturas
+		//while  (indice<=lfactu.size()){ 
+		while (indice==10) {
+			factu.getFechaEmision();
+			indice++;
+			if (dia == factu.getFechaEmision()){
+				if (factu.getActivo()==true) {
+					lfactu.add(factu);
+				}
+			}
+		}
+		return lfactu;
 	}
 
 	/**
@@ -37,8 +51,18 @@ public class ControllerContable {
 	 * @return
 	 */
 	public List <Factura> facturasPorProveedor(int cuit) {
-		// TODO implement here
-		return null;
+		Factura factur = new Factura();
+		ArrayList<Factura> lfactur= new ArrayList<Factura>();
+		int indice=0; //falta definir 
+		while (indice==10) {
+			indice++;
+			if (cuit == factur.obtenerProveedorCuit()) {
+				if (factur.getActivo()==true) {
+					lfactur.add(factur);
+				}
+			}
+		}
+		return lfactur;
 	}
 
 	/**
@@ -99,19 +123,43 @@ public class ControllerContable {
 	 * 
 	 */
 	
-	public void setOrdenesDePago(OrdenDePago value) {
+	
+	
+public void setOrdenesDePago(OrdenDePago value) {
 		
-		this.ordenesDePago.add(value);
+		if (ordenNueva(value, this.ordenesDePago)) {
+			this.ordenesDePago.add(value);
+		}
+		else {
+			System.out.println("Esta Orden ya existe");
+		}
+		
 		
 	}
 	
-	
+
+
+	public Boolean ordenNueva(OrdenDePago orden, ArrayList<OrdenDePago> listaOrden) {
+		
+		Iterator iter1 = listaOrden.iterator();
+		OrdenDePago aux; 
+		
+		while (iter1.hasNext()) {
+			
+			aux = (OrdenDePago) iter1.next();
+			if (orden.getNumero() == aux.getNumero()) {
+				return false;
+			}
+		}
+		return true;
+			
+		}
 	
 	
 	/**
 	 * 
 	 */
-	public Set<OrdenDePago> getOrdenesDePago() {
+	public List<OrdenDePago> getOrdenesDePago() {
 		return this.ordenesDePago;
 		// TODO implement here
 	}
