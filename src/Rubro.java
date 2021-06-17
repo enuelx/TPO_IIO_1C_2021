@@ -29,13 +29,14 @@ public class Rubro {
 	 */
 	public int getIdRubro() {
 		// TODO implement here
-		return 0;
+		return this.idRubro;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setIdRubro(int value) {
+		this.idRubro=value;
 		// TODO implement here
 	}
 
@@ -44,13 +45,14 @@ public class Rubro {
 	 */
 	public String getNombre() {
 		// TODO implement here
-		return null;
+		return this.nombre;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setNombre(String value) {
+		this.nombre=value;
 		// TODO implement here
 	}
 

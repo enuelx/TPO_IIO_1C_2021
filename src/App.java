@@ -9,6 +9,7 @@ public class App {
         System.out.println(cnr01.calcularPorcentaje());
         Proveedor p1 = new Proveedor();
         p1.setCUIT(123);
+        System.out.println(p1.getRubros());
         System.out.println(p1.getCUIT());
         ControllerContable usuario = new ControllerContable();
         usuario.reporteDeCuenta(0);
