@@ -27,19 +27,23 @@ public class ControllerContable {
 	 * @param dia 
 	 * @return
 	 */
-	Factura factu = new Factura();
-	ArrayList<String> lista1 = new ArrayList<String>();
-	public List <Factura> facturasPorDia(LocalDate dia) {
-		while Factura{
+	
+	public ArrayList<Factura> facturasPorDia(LocalDate dia) {
+		Factura factu = new Factura();
+		ArrayList<Factura> lfactu= new ArrayList<Factura>();
+		int indice=0;
+		//falta definir lista de facturas
+		//while  (indice<=lfactu.size()){ 
+		while (indice==10) {
 			factu.getFechaEmision();
-			if LocalDate == factu.getFechaEmision(){
-				if 
-					
+			indice++;
+			if (dia == factu.getFechaEmision()){
+				if (factu.getActivo()==true) {
+					lfactu.add(factu);
 				}
 			}
 		}
-		
-		return;
+		return lfactu;
 	}
 
 	/**
@@ -47,8 +51,18 @@ public class ControllerContable {
 	 * @return
 	 */
 	public List <Factura> facturasPorProveedor(int cuit) {
-		// TODO implement here
-		return null;
+		Factura factur = new Factura();
+		ArrayList<Factura> lfactur= new ArrayList<Factura>();
+		int indice=0; //falta definir 
+		while (indice==10) {
+			indice++;
+			if (cuit == factur.obtenerProveedorCuit()) {
+				if (factur.getActivo()==true) {
+					lfactur.add(factur);
+				}
+			}
+		}
+		return lfactur;
 	}
 
 	/**

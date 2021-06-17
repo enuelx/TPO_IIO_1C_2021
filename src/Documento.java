@@ -169,5 +169,25 @@ public class Documento {
 	public void setLibroIVA(LibroIVA value) {
 		// TODO implement here
 	}
-
+	
+	public void setActivo(boolean value) {
+		this.activo=value;
+	}
+	
+	public boolean getActivo() {
+		return this.activo;
+	}
+	
+	public void setProveedor(Proveedor value) {
+		this.proveedor = value;
+	}
+	
+	public Proveedor getProveedor() {
+		return this.proveedor;
+	}
+	
+	public int getProveedorCuit() {
+		return this.proveedor.getCUIT();
+	}
+	
 }
