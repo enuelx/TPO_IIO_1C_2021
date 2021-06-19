@@ -295,6 +295,20 @@ public class Proveedor {
 	/**
 	 * @return
 	 */
+	public TipoIVA getIvaARetener() {
+		return this.ivaARetener;
+	}
+
+	/**
+	 * @param value
+	 */
+	public void setIvaARetener(TipoIVA value) {
+		this.ivaARetener = value;
+	}
+
+	/**
+	 * @return
+	 */
 	public Boolean certificadoValido() {
 		return null;
 	}
@@ -303,7 +317,7 @@ public class Proveedor {
 	 * @return
 	 */
 	public Double calcularGananciasARetener() {
-		return null;
+		return 0.0;
 	}
 
 }

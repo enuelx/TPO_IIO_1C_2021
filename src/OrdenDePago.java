@@ -1,6 +1,7 @@
 import java.util.*;
 
 import enums.FormaPago;
+import enums.TipoIVA;
 
 
 
@@ -68,5 +69,12 @@ public class OrdenDePago {
 
 	public void setProveedor(Proveedor proveedor) {
 		this.proveedor = proveedor;
+	}
+
+	public double totalRetenciones(){
+		double ganancias = this.proveedor.calcularGananciasARetener();
+		TipoIVA iva = this.proveedor.getIvaARetener();
+		double iibb = this.proveedor.getIngresosBrutos();
+		return iibb + ganancias;
 	}
 }
