@@ -114,11 +114,15 @@ public class ControllerContable {
 	 * @return
 	 */
 	public Double totalImpuestosRetenidos() {
-		int size = ordenesDePago.size();
-		for (int i = 0; i < size; i++) {
-			return 0.0;
+		List<Double> dR = new ArrayList<Double>();
+		for (int i = 0; i < ordenesDePago.size(); i++) {
+			dR.add(ordenesDePago.get(i).totalRetenciones());
 		}
-		return 0.0;
+		double sumaTotal = 0.0;
+		for (int i = 0; i < dR.size(); i++) {
+			sumaTotal+=dR.get(i);
+		}
+		return sumaTotal;
 	}
 
 	/**
