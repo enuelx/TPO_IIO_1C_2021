@@ -99,29 +99,10 @@ public class Proveedor {
 	private Double gananciasARetener;
 
 
-
-
-
-
-
-
-
-
-	/**
-	 * 
-	 */
-	public Set<Factura> Posee;
-
-
-
-
-
-
 	/**
 	 * @return
 	 */
 	public int getCUIT() {
-		// TODO implement here
 		return this.CUIT;
 	}
 
@@ -130,14 +111,12 @@ public class Proveedor {
 	 */
 	public void setCUIT(int value) {
 		this.CUIT=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public String getResponsabilidadIva() {
-		// TODO implement here
 		return this.responsabilidadIva;
 	}
 
@@ -146,14 +125,12 @@ public class Proveedor {
 	 */
 	public void setResponsabilidadIva(String value) {
 		this.responsabilidadIva=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public String getRazonSocial() {
-		// TODO implement here
 		return this.razonSocial;
 	}
 
@@ -162,14 +139,12 @@ public class Proveedor {
 	 */
 	public void setRazonSocial(String value) {
 		this.razonSocial=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public String getNombre() {
-		// TODO implement here
 		return this.nombre;
 	}
 
@@ -178,14 +153,12 @@ public class Proveedor {
 	 */
 	public void setNombre(String value) {
 		this.nombre=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public String getDireccion() {
-		// TODO implement here
 		return this.direccion;
 	}
 
@@ -194,14 +167,12 @@ public class Proveedor {
 	 */
 	public void setDireccion(String value) {
 		this.direccion=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public int getTelefono() {
-		// TODO implement here
 		return this.telefono;
 	}
 
@@ -210,14 +181,12 @@ public class Proveedor {
 	 */
 	public void setTelefono(int value) {
 		this.telefono=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public String getEmail() {
-		// TODO implement here
 		return this.email;
 	}
 
@@ -226,14 +195,12 @@ public class Proveedor {
 	 */
 	public void setEmail(String value) {
 		this.email=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public double getIngresosBrutos() {
-		// TODO implement here
 		return this.ingresosBrutos;
 	}
 
@@ -242,14 +209,12 @@ public class Proveedor {
 	 */
 	public void setIngresosBrutos(double value) {
 		this.ingresosBrutos=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public LocalDate getInicioActividades() {
-		// TODO implement here
 		return this.inicioActividades;
 	}
 
@@ -258,14 +223,12 @@ public class Proveedor {
 	 */
 	public void setInicioActividades(LocalDate value) {
 		this.inicioActividades=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public List<Rubro> getRubros() {
-		// TODO implement here
 		return this.rubros;
 	}
 
@@ -273,14 +236,12 @@ public class Proveedor {
 	 * @param value
 	 */
 	public void setRubros(List<Rubro> value) {
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public List<ProductoYServicio> getProductosServicios() {
-		// TODO implement here
 		return null;
 	}
 
@@ -288,14 +249,12 @@ public class Proveedor {
 	 * @param value
 	 */
 	public void setProductosServicios(List<ProductoYServicio> value) {
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public List<CertificadoNoRetencion> getCertificado() {
-		// TODO implement here
 		return this.certificado;
 	}
 
@@ -303,14 +262,12 @@ public class Proveedor {
 	 * @param value
 	 */
 	public void setCertificado(List<CertificadoNoRetencion> value) {
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public CuentaCorriente getCuentaCorriente() {
-		// TODO implement here
 		return this.cuentaCorriente;
 	}
 
@@ -319,14 +276,12 @@ public class Proveedor {
 	 */
 	public void setCuentaCorriente(CuentaCorriente value) {
 		this.cuentaCorriente=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public Double getTopeDeuda() {
-		// TODO implement here
 		return this.topeDeuda;
 	}
 
@@ -335,14 +290,12 @@ public class Proveedor {
 	 */
 	public void setTopeDeuda(Double value) {
 		this.topeDeuda=value;
-		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
 	public Boolean certificadoValido() {
-		// TODO implement here
 		return null;
 	}
 
@@ -350,7 +303,6 @@ public class Proveedor {
 	 * @return
 	 */
 	public Double calcularGananciasARetener() {
-		// TODO implement here
 		return null;
 	}
 

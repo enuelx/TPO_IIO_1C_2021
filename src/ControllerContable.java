@@ -114,8 +114,10 @@ public class ControllerContable {
 	 * @return
 	 */
 	public Double totalImpuestosRetenidos() {
-		// TODO implement here
-		return null;
+		int size = ordenesDePago.size();
+		for (int i = 0; i < size; i++) {
+			ordenesDePago[i].
+		}
 	}
 
 	/**
