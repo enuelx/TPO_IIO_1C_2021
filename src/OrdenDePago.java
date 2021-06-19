@@ -69,9 +69,4 @@ public class OrdenDePago {
 	public void setProveedor(Proveedor proveedor) {
 		this.proveedor = proveedor;
 	}
-
-	public double totalRetenciones() {
-		this.proveedor.
-	}
-
 }

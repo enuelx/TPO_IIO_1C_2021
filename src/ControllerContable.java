@@ -116,8 +116,9 @@ public class ControllerContable {
 	public Double totalImpuestosRetenidos() {
 		int size = ordenesDePago.size();
 		for (int i = 0; i < size; i++) {
-			ordenesDePago[i].
+			return 0.0;
 		}
+		return 0.0;
 	}
 
 	/**
