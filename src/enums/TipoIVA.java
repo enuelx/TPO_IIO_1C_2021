@@ -6,6 +6,7 @@ package enums;
 public enum TipoIVA {
     // solo para inicializar
     INIT,
+    // valores para usar
     DOSCINCO,
     CINCO,
     DIEZCINCO,
