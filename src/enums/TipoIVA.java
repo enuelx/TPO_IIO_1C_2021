@@ -10,7 +10,7 @@ public enum TipoIVA {
     CINCO,
     DIEZCINCO,
     VEINTIUNO,
-    VIENTISIETE;
+    VEINTISIETE;
 
     public double getIva (TipoIVA iva) {
         switch (iva) {
@@ -22,7 +22,7 @@ public enum TipoIVA {
                 return 10.5;
             case VEINTIUNO:
                 return 21.0;
-            case VIENTISIETE:
+            case VEINTISIETE:
                 return 27.0;
             case INIT:
                 return 0.0;
