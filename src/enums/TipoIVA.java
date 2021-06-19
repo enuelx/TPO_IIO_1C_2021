@@ -4,6 +4,8 @@ package enums;
  * 
  */
 public enum TipoIVA {
+    // solo para inicializar
+    INIT,
     DOSCINCO,
     CINCO,
     DIEZCINCO,
@@ -22,6 +24,8 @@ public enum TipoIVA {
                 return 21.0;
             case VIENTISIETE:
                 return 27.0;
+            case INIT:
+                return 0.0;
         }
         return 0.0;
     }

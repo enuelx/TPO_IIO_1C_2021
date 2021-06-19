@@ -73,8 +73,9 @@ public class OrdenDePago {
 
 	public double totalRetenciones(){
 		double ganancias = this.proveedor.calcularGananciasARetener();
-		TipoIVA iva = this.proveedor.getIvaARetener();
+		TipoIVA e_iva = TipoIVA.INIT;
+		double iva = e_iva.getIva(this.proveedor.getIvaARetener());
 		double iibb = this.proveedor.getIngresosBrutos();
-		return iibb + ganancias;
+		return iibb + ganancias + iva;
 	}
 }
