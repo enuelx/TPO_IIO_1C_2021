@@ -14,6 +14,10 @@ public class ControllerAdministrativo {
 	// Instancia de Objetos Base
 	Proveedor pv = new Proveedor();
 
+	
+	
+	private List<ProductoYServicio> productosYServicios;
+	
 
 	/**
 	 * @param value
@@ -32,8 +36,34 @@ public class ControllerAdministrativo {
 	/**
 	 * @param codigoItem
 	 */
-	public void compulsaDePrecios(String codigoItem) {
-		// TODO implement here
+	public List<ProveedorProductoServicio> compulsaDePrecios(String codigoItem) {
+		
+		ProductoYServicio productoBuscado = this.encontrarProductoYServicio(codigoItem, this.productosYServicios);
+		
+		return productoBuscado.getProductosYServiciosProveedor();
+		
+		
 	}
 
+	
+public ProductoYServicio encontrarProductoYServicio (String codItem, List<ProductoYServicio> listaProductos) {
+		
+		Iterator iter1 = listaProductos.iterator();
+		ProductoYServicio aux; 
+		
+		while (iter1.hasNext()) {
+			
+			aux = (ProductoYServicio) iter1.next();
+			if (codItem.equals(aux.getCodigoItem())) {
+				return aux;
+			}
+		}
+		return null;
+			
+		}
+	
+	
+	
+	
+	
 }
