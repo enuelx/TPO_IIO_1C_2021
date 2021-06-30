@@ -51,7 +51,7 @@ public class LibroIVA {
 	 */
 	public int getCuit() {
 		// TODO implement here
-		return 0;
+		return this.cuit;
 	}
 
 	/**
@@ -59,6 +59,7 @@ public class LibroIVA {
 	 */
 	public void setCuit(int value) {
 		// TODO implement here
+		this.cuit=value;
 	}
 
 	/**
@@ -66,7 +67,7 @@ public class LibroIVA {
 	 */
 	public String getNombreProveedor() {
 		// TODO implement here
-		return "";
+		return this.nombreProveedor;
 	}
 
 	/**
@@ -74,6 +75,7 @@ public class LibroIVA {
 	 */
 	public void setNombreProveedor(String value) {
 		// TODO implement here
+		this.nombreProveedor=value;
 	}
 
 	/**
@@ -81,7 +83,7 @@ public class LibroIVA {
 	 */
 	public LocalDate getFecha() {
 		// TODO implement here
-		return null;
+		return this.fecha;
 	}
 
 	/**
@@ -89,6 +91,7 @@ public class LibroIVA {
 	 */
 	public void setFecha(LocalDate value) {
 		// TODO implement here
+		this.fecha=value;
 	}
 
 	/**
@@ -96,14 +99,15 @@ public class LibroIVA {
 	 */
 	public List<TipoIVA> getTiposDeIva() {
 		// TODO implement here
-		return null;
+		return this.tiposDeIva;
 	}
 
 	/**
 	 * @param value
 	 */
-	public void setTiposDeIva(List<TipoIVA> value) {
+	public void setTiposDeIva(TipoIVA value) {
 		// TODO implement here
+		this.tiposDeIva.add(value);
 	}
 
 	/**
@@ -111,14 +115,15 @@ public class LibroIVA {
 	 */
 	public List<Float> getTotalesIva() {
 		// TODO implement here
-		return null;
+		return this.totalesIva;
 	}
 
 	/**
 	 * @param value
 	 */
-	public void setTotalesIva(List<Float> value) {
+	public void setTotalesIva(Float value) {
 		// TODO implement here
+		this.totalesIva.add(value);
 	}
 
 	/**
@@ -126,7 +131,7 @@ public class LibroIVA {
 	 */
 	public EspecieDocumento getEspecieDocumento() {
 		// TODO implement here
-		return null;
+		return this.especieDocumento;
 	}
 
 	/**
@@ -134,6 +139,7 @@ public class LibroIVA {
 	 */
 	public void setEspecieDocumento(EspecieDocumento value) {
 		// TODO implement here
+		this.especieDocumento=value;
 	}
 
 }
