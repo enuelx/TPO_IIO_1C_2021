@@ -3,7 +3,7 @@ import enums.TipoIVA;
 /**
  * 
  */
-public class ProductoYServicio {
+public class ProductoYServicio extends Persistente{
 
 	/**
 	 * Default constructor

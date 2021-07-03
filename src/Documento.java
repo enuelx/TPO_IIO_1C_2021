@@ -83,29 +83,30 @@ public class Documento {
 	 * @return
 	 */
 	public LocalDate getFechaEmision() {
-		// TODO implement here
-		return null;
+		
+		return this.fechaEmision;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setFechaEmision(LocalDate value) {
-		// TODO implement here
+		this.fechaEmision = value;
 	}
 
 	/**
 	 * 
 	 */
-	public void getTipoDoc() {
-		// TODO implement here
+	public TipoDocumento getTipoDoc() {
+		return this.tipoDoc;
 	}
 
 	/**
 	 * @param value
 	 */
-	public void setTipoDoc(String value) {
-		// TODO implement here
+	public void setTipoDoc(TipoDocumento value) {
+
+		this.tipoDoc = value;
 	}
 
 	/**
@@ -126,9 +127,9 @@ public class Documento {
 	/**
 	 * @return
 	 */
-	public String documentoActivo() {
+	public Boolean documentoActivo() {
 		// TODO implement here
-		return "";
+		return this.documentoActivo();
 	}
 
 	/**

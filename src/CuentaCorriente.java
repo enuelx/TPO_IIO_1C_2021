@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * 
  */
-public class CuentaCorriente {
+public class CuentaCorriente extends Persistente{
 	
 	/**
 	 * Default constructor
@@ -94,52 +94,54 @@ public class CuentaCorriente {
 	 * @param value
 	 */
 	public void setProveedor(Proveedor value) {
-		// TODO implement here
+
+		this.proveedor = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public int getNroCuenta() {
-		// TODO implement here
-		return 0;
+		
+		return this.nroCuenta;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setNroCuenta(int value) {
-		// TODO implement here
+		this.nroCuenta = value;
 	}
 
 	/**
 	 * @return
 	 */
-	public List<String> getDocRecibidos() {
-		// TODO implement here
-		return null;
+	public List<Documento> getDocRecibidos() {
+	
+		return this.docRecibidos;
 	}
 
 	/**
 	 * @param value
 	 */
-	public void setDocRecibidos(List<String> value) {
-		// TODO implement here
+	public void setDocRecibidos(List<Documento> value) {
+
+		this.docRecibidos = value;
 	}
 
 	/**
 	 * @return
 	 */
-	public List<String> getDocInpagos() {
-		// TODO implement here
-		return null;
+	public List<Documento> getDocInpagos() {
+		return this.docInpagos;
 	}
 
 	/**
 	 * @param value
 	 */
-	public void setDocInpagos(List<String> value) {
-		// TODO implement here
+	public void setDocInpagos(List<Documento> value) {
+		
+		this.docInpagos = value;
 	}
 
 	/**

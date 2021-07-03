@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 
  */
-public class Proveedor {
+public class Proveedor extends Persistente {
 
 	/**
 	 * Default constructor

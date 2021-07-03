@@ -48,30 +48,30 @@ public class Cheque {
 	 * @return
 	 */
 	public int getNumero() {
-		// TODO implement here
-		return 0;
+		
+		return this.numero;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setNumero(int value) {
-		// TODO implement here
+		this.numero = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public LocalDate getFechaEmision() {
-		// TODO implement here
-		return null;
+		
+		return this.fechaEmision;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setFechaEmision(LocalDate value) {
-		// TODO implement here
+		this.fechaEmision = value;
 	}
 
 	/**
@@ -79,59 +79,61 @@ public class Cheque {
 	 */
 	public LocalDate getFechaVencimiento() {
 		// TODO implement here
-		return null;
+		return this.fechaVencimiento;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setFechaVencimiento(LocalDate value) {
-		// TODO implement here
+		this.fechaVencimiento = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public String getFirmante() {
-		// TODO implement here
-		return "";
+		
+		return this.firmante;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setFirmante(String value) {
-		// TODO implement here
+		this.firmante = value;
+		
 	}
 
 	/**
 	 * @return
 	 */
 	public float getImporte() {
-		// TODO implement here
-		return 0.0f;
+		
+		return this.importe;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setImporte(float value) {
-		// TODO implement here
+
+		this.importe = value;
 	}
 
 	/**
 	 * @return
 	 */
 	public Boolean getEsPropio() {
-		// TODO implement here
-		return null;
+		
+		return this.esPropio;
 	}
 
 	/**
 	 * @param value
 	 */
 	public void setEsPropio(Boolean value) {
-		// TODO implement here
+		this.esPropio = value;
 	}
 
 }
