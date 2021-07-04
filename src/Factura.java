@@ -42,7 +42,13 @@ public class Factura extends Documento {
 	/**
 	 * 
 	 */
-	public void getCuitProveedorCompra() {
+	public int getCuitProveedorCompra() {
+		return this.getCuitProveedorCompra();
+	}
+
+	public static int size() {
+		Factura.size();
+		return Factura.size();
 		
 	}
 

@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 import java.util.*;
 
+import enums.TipoIVA;
+
 
 /**
  * 
@@ -130,9 +132,68 @@ public class ControllerContable {
 	 * @return
 	 */
 	public List <String> consultaLibroIva(String codDocumento ) {
-		// TODO implement here
-		return null;
-	}
+		Factura fact = new Factura();
+		LibroIVA libro = new LibroIVA();
+		Proveedor prov = new Proveedor();
+		ItemDeCompra item = new ItemDeCompra();
+		int LocalDate;
+		List <String> lista = new ArrayList<String>();
+		for (int i = 0; i < Factura.size(); i++) {
+			fact.getCodDocumento();
+			if (fact.getCodDocumento()== codDocumento) {
+				fact.getLibroIVA();
+				fact.getCuitProveedorCompra();
+				libro.setCuit(i); //va un i o que va adentro??
+				prov.getNombre();
+				libro.setNombreProveedor(prov.getNombre());
+				libro.setFecha(null); //se que no va un null, no se que poner adentro para que detecte fecha
+				fact.documentoActivo();
+				libro.setEspecieDocumento(null);
+				fact.TotalDeIva(i);
+				if (TipoIVA.DOSCINCO==item.getIva()) {
+					for (int j = 0; j < ItemDeCompra.size(); j++) {
+						item.getIva();
+						item.getCantidad();
+						item.getPrecioAcordado();
+						libro.setTiposDeIva(TipoIVA.DOSCINCO);
+					}
+				}
+				if (TipoIVA.CINCO==item.getIva()) {
+					for (int j = 0; j < ItemDeCompra.size(); j++) {
+						item.getIva();
+						item.getCantidad();
+						item.getPrecioAcordado();
+						libro.setTiposDeIva(TipoIVA.CINCO);
+				}
+				}
+				if (TipoIVA.DIEZCINCO==item.getIva()) {
+					for (int j = 0; j < ItemDeCompra.size(); j++) {
+						item.getIva();
+						item.getCantidad();
+						item.getPrecioAcordado();
+						libro.setTiposDeIva(TipoIVA.DIEZCINCO);
+				}
+				}
+				if (TipoIVA.VEINTIUNO==item.getIva()) {
+					for (int j = 0; j < ItemDeCompra.size(); j++) {
+						item.getIva();
+						item.getCantidad();
+						item.getPrecioAcordado();
+						libro.setTiposDeIva(TipoIVA.VEINTIUNO);
+				}
+				}
+				if (TipoIVA.VEINTISIETE==item.getIva()) {
+					for (int j = 0; j < ItemDeCompra.size(); j++) {
+						item.getIva();
+						item.getCantidad();
+						item.getPrecioAcordado();
+						libro.setTiposDeIva(TipoIVA.VEINTISIETE);
+				}
+				}
+			}
+		}
+		return lista;
+		}
 
 	/**
 	 * 

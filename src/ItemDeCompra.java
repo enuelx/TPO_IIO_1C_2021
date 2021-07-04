@@ -81,15 +81,24 @@ public class ItemDeCompra {
 	 * @return
 	 */
 	public TipoIVA getIva() {
-		// TODO implement here
-		return null;
+		TipoIVA.valueOf("DOSCINCO");
+		TipoIVA.valueOf("CINCO");
+		TipoIVA.valueOf("DIEZCINCO");
+		TipoIVA.valueOf("VEINTIUNO");
+		TipoIVA.valueOf("VEINTISIETE");
+		return this.getIva();
 	}
 
 	/**
 	 * @param value
 	 */
-	public void setIva(TipoIVA value) {
-		// TODO implement here
+	public TipoIVA setIva(TipoIVA value) {
+		return this.iva = value;
+	}
+
+	public static int size() {
+		ItemDeCompra.size();
+		return ItemDeCompra.size();
 	}
 
 }

@@ -78,7 +78,6 @@ public class Cheque {
 	 * @return
 	 */
 	public LocalDate getFechaVencimiento() {
-		// TODO implement here
 		return this.fechaVencimiento;
 	}
 
