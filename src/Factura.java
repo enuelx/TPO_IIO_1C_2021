@@ -1,6 +1,8 @@
 
 import java.util.*;
 
+import enums.EspecieDocumento;
+
 /**
  * 
  */
@@ -50,6 +52,14 @@ public class Factura extends Documento {
 		Factura.size();
 		return Factura.size();
 		
+	}
+	
+	public EspecieDocumento getEspecieDocumento() {
+		return this.getEspecieDocumento();
+	}
+	
+	public List<ItemDeCompra> getProductos(){
+		return this.getProductos();
 	}
 
 }

@@ -127,9 +127,9 @@ public class Documento {
 	/**
 	 * @return
 	 */
-	public Boolean documentoActivo() {
+	public Boolean documentoActivo() { //falta logica 
 		// TODO implement here
-		return this.documentoActivo();
+		return true;
 	}
 
 	/**
@@ -191,4 +191,11 @@ public class Documento {
 		return this.proveedor.getCUIT();
 	}
 	
+	public List<ItemDeCompra> getProductos() {
+		return this.productos;
+	}
+	
+	public void setProductos(List<ItemDeCompra> value) {
+		this.productos=value;
+	}
 }

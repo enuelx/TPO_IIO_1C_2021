@@ -19,6 +19,9 @@ public class ControllerContable {
 	
 	private ArrayList<OrdenDePago> ordenesDePago = new ArrayList <OrdenDePago>() ;
 	
+	private ArrayList<Factura> facturas = new ArrayList <Factura>() ; //agregar repositorio
+	
+	
 
 	
 	public void calcularGanancia() {
@@ -33,12 +36,10 @@ public class ControllerContable {
 	public ArrayList<Factura> facturasPorDia(LocalDate dia) {
 		Factura factu = new Factura();
 		ArrayList<Factura> lfactu= new ArrayList<Factura>();
-		int indice=0;
-		//falta definir lista de facturas
-		//while  (indice<=lfactu.size()){ 
-		while (indice==10) {
+		int i = 0;
+		while (facturas.size()!=i) {
 			factu.getFechaEmision();
-			indice++;
+			i++;
 			if (dia == factu.getFechaEmision()){
 				if (factu.getActivo()==true) {
 					lfactu.add(factu);
@@ -55,9 +56,9 @@ public class ControllerContable {
 	public List <Factura> facturasPorProveedor(int cuit) {
 		Factura factur = new Factura();
 		ArrayList<Factura> lfactur= new ArrayList<Factura>();
-		int indice=0; //falta definir 
-		while (indice==10) {
-			indice++;
+		int i = 0;
+		while (facturas.size()!=i) {
+			i++;
 			if (cuit == factur.obtenerProveedorCuit()) {
 				if (factur.getActivo()==true) {
 					lfactur.add(factur);
@@ -131,68 +132,66 @@ public class ControllerContable {
 	 * @param codDocumento  
 	 * @return
 	 */
-	public List <String> consultaLibroIva(String codDocumento ) {
+	public LibroIVA consultaLibroIva(String codDocumento ) {
+		//facturas.clear();
 		Factura fact = new Factura();
 		LibroIVA libro = new LibroIVA();
 		Proveedor prov = new Proveedor();
-		ItemDeCompra item = new ItemDeCompra();
-		int LocalDate;
+		List<ItemDeCompra> item = fact.getProductos();
+		LocalDate ld = LocalDate.now();
 		List <String> lista = new ArrayList<String>();
-		for (int i = 0; i < Factura.size(); i++) {
+		int i = 0;
+		while (facturas.size()!=i) {
 			fact.getCodDocumento();
-			if (fact.getCodDocumento()== codDocumento) {
+			i++;
+			if (facturas.get(i).getCodDocumento().equals(codDocumento)){
+				fact=facturas.get(i);
 				fact.getLibroIVA();
 				fact.getCuitProveedorCompra();
-				libro.setCuit(i); //va un i o que va adentro??
+				libro.setCuit(fact.getProveedorCuit());
 				prov.getNombre();
 				libro.setNombreProveedor(prov.getNombre());
-				libro.setFecha(null); //se que no va un null, no se que poner adentro para que detecte fecha
+				libro.setFecha(ld); 
 				fact.documentoActivo();
-				libro.setEspecieDocumento(null);
+				libro.setEspecieDocumento(fact.getEspecieDocumento());
 				fact.TotalDeIva(i);
-				if (TipoIVA.DOSCINCO==item.getIva()) {
-					for (int j = 0; j < ItemDeCompra.size(); j++) {
-						item.getIva();
-						item.getCantidad();
-						item.getPrecioAcordado();
+				for (int k =0; k < item.size(); k++) {
+					ItemDeCompra producto = item.get(k);
+					if (TipoIVA.DOSCINCO==producto.getIva()) {
+						producto.getIva();
+						producto.getCantidad();
+						producto.getPrecioAcordado();
 						libro.setTiposDeIva(TipoIVA.DOSCINCO);
 					}
-				}
-				if (TipoIVA.CINCO==item.getIva()) {
-					for (int j = 0; j < ItemDeCompra.size(); j++) {
-						item.getIva();
-						item.getCantidad();
-						item.getPrecioAcordado();
+					if (TipoIVA.CINCO==producto.getIva()) {
+						producto.getIva();
+						producto.getCantidad();
+						producto.getPrecioAcordado();
 						libro.setTiposDeIva(TipoIVA.CINCO);
-				}
-				}
-				if (TipoIVA.DIEZCINCO==item.getIva()) {
-					for (int j = 0; j < ItemDeCompra.size(); j++) {
-						item.getIva();
-						item.getCantidad();
-						item.getPrecioAcordado();
+					}
+					if (TipoIVA.DIEZCINCO==producto.getIva()) {
+						producto.getIva();
+						producto.getCantidad();
+						producto.getPrecioAcordado();
 						libro.setTiposDeIva(TipoIVA.DIEZCINCO);
-				}
-				}
-				if (TipoIVA.VEINTIUNO==item.getIva()) {
-					for (int j = 0; j < ItemDeCompra.size(); j++) {
-						item.getIva();
-						item.getCantidad();
-						item.getPrecioAcordado();
+					}
+					if (TipoIVA.VEINTIUNO==producto.getIva()) {
+						producto.getIva();
+						producto.getCantidad();
+						producto.getPrecioAcordado();
 						libro.setTiposDeIva(TipoIVA.VEINTIUNO);
-				}
-				}
-				if (TipoIVA.VEINTISIETE==item.getIva()) {
-					for (int j = 0; j < ItemDeCompra.size(); j++) {
-						item.getIva();
-						item.getCantidad();
-						item.getPrecioAcordado();
+					}
+					if (TipoIVA.VEINTISIETE==producto.getIva()) {
+						producto.getIva();
+						producto.getCantidad();
+						libro.setCantidad(); //faltan sets y en clase 
+						producto.getPrecioAcordado();
 						libro.setTiposDeIva(TipoIVA.VEINTISIETE);
-				}
-				}
+					}
+				}//set tipos de iva en lista??
 			}
-		}
-		return lista;
+		}//totales ???
+		return libro;
 		}
 
 	/**
