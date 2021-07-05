@@ -1,7 +1,9 @@
-import java.time.LocalDate;
-import java.util.*;
-
 import enums.TipoIVA;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 
 /**
@@ -184,7 +186,7 @@ public class ControllerContable {
 					if (TipoIVA.VEINTISIETE==producto.getIva()) {
 						producto.getIva();
 						producto.getCantidad();
-						libro.setCantidad(); //faltan sets y en clase 
+						//libro.setCantidad(); //faltan sets y en clase
 						producto.getPrecioAcordado();
 						libro.setTiposDeIva(TipoIVA.VEINTISIETE);
 					}
