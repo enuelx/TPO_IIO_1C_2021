@@ -1,6 +1,8 @@
-import java.time.LocalDate;
+package modelo;
+
 import enums.TipoRetencion;
-import java.util.*;
+
+import java.time.LocalDate;
 
 public class CertificadoNoRetencion {
 

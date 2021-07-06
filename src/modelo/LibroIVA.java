@@ -1,8 +1,10 @@
-import java.time.LocalDate;
-import java.util.*;
+package modelo;
 
 import enums.EspecieDocumento;
 import enums.TipoIVA;
+
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * 

@@ -1,3 +1,5 @@
+package modelo;
+
 import enums.TipoIVA;
 
 import java.time.LocalDate;

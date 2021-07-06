@@ -1,4 +1,4 @@
-
+package modelo;
 public class Persistente {
 	private Integer id;
 	
