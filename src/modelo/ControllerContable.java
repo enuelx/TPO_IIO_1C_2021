@@ -88,7 +88,7 @@ public class ControllerContable {
 	/**
 	 * @param cuit 
 	 * @return
-	 */
+	 *//*
 	public CuentaCorriente reporteDeCuenta(int cuit) {
 		CuentaCorriente cuenta = new CuentaCorriente();
 		if (cuenta.obtenerCuitProveedor(cuit) == true) {
@@ -103,8 +103,8 @@ public class ControllerContable {
 		}
 		// TODO implement here
 		return null;
-		
-	}
+
+	}*/
 
 	/**
 	 * @return
@@ -116,7 +116,7 @@ public class ControllerContable {
 
 	/**
 	 * @return
-	 */
+	 *//*
 	public List<CuentaCorriente> totalDeudaPorProveedor() {
 		CuentaCorriente cuen = new CuentaCorriente();
 		ArrayList<CuentaCorriente> lcuen= new ArrayList<CuentaCorriente>();
@@ -128,7 +128,7 @@ public class ControllerContable {
 		}
 		System.out.println(lcuen);
 		return lcuen;
-	}
+	}*/
 
 	/**
 	 * @return

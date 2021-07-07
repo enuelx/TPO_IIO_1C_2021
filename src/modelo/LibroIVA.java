@@ -13,9 +13,9 @@ public class LibroIVA {
 
 	/**
 	 * Default constructor
-	 */
+
 	public LibroIVA() {
-	}
+	}*/
 
 	/**
 	 * 

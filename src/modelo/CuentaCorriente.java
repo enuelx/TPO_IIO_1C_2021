@@ -8,9 +8,9 @@ public class CuentaCorriente extends Persistente{
 	
 	/**
 	 * Default constructor
-	 */
+
 	public CuentaCorriente() {
-	}
+	}*/
 
 	/**
 	 * 
@@ -20,12 +20,12 @@ public class CuentaCorriente extends Persistente{
 	/**
 	 * 
 	 */
-	private Proveedor proveedor;
+	private int proveedor;
 
 	/**
 	 * 
 	 */
-	private float deuda;
+	private Double deuda;
 
 	/**
 	 * 
@@ -42,6 +42,14 @@ public class CuentaCorriente extends Persistente{
 	 */
 	private Double pagosRealizados;
 
+	public CuentaCorriente(int cuit, Double deuda, List<Documento> docRecibidos, List<Documento> docImpagos, Double pagosRealizados) {
+		this.setProveedor(cuit);
+		this.setDeuda(deuda);
+		this.setDocRecibidos(docRecibidos);
+		this.setDocInpagos(docImpagos);
+		this.setPagosRealizados(pagosRealizados);
+	}
+
 	/**
 	 * @return
 	 */
@@ -53,16 +61,16 @@ public class CuentaCorriente extends Persistente{
 	/**
 	 * @param value
 	 */
-	public void setPagosRealizados(Double value) {
+	public void setPagosRealizados(Double value)
+		 {
 		this.pagosRealizados=value;
-		
 		// TODO implement here
 	}
 
 	/**
 	 * @return
 	 */
-	public float getDeuda() {
+	public Double getDeuda() {
 		// TODO implement here
 		return this.deuda;
 	}
@@ -70,14 +78,14 @@ public class CuentaCorriente extends Persistente{
 	/**
 	 * @param value
 	 */
-	public void setDeuda(float value) {
+	public void setDeuda(Double value) {
 		this.deuda=value;
 		// TODO implement here
 	}
 
 	/**
 	 * @return
-	 */
+
 	public Proveedor getProveedor() {
 		
 		Proveedor proveedor1 = new Proveedor();
@@ -90,14 +98,23 @@ public class CuentaCorriente extends Persistente{
 		proveedor1.getEmail();
 		// TODO implement here
 		return proveedor1;
+	}*/
+	public int getProveedor(){
+		return this.proveedor;
+	}
+	public void setProveedor(int value){
+		this.proveedor=value;
 	}
 
 	/**
 	 * @param value
-	 */
+
 	public void setProveedor(Proveedor value) {
 
 		this.proveedor = value;
+	}
+	public void setCuitProveedor(int value){
+		this.proveedor.setCUIT(value);
 	}
 
 	/**
@@ -148,7 +165,7 @@ public class CuentaCorriente extends Persistente{
 
 	/**
 	 * @return
-	 */
+
 	public Boolean obtenerCuitProveedor(int value) {
 		Proveedor proveedor1 = new Proveedor();
 		proveedor1=getProveedor();
@@ -158,15 +175,14 @@ public class CuentaCorriente extends Persistente{
 		// TODO implement here
 		return false;
 	}
-	
-	/**
+*/	/**
 	 * @param value 
 	 * @return
 	 */
 	
 	class Datos{
 		
-		Float Deuda;
+		Double Deuda;
 		List<Documento> docrecibidos;
 		List<Documento> docinpagos;
 		Double pagosrealizados;

@@ -27,7 +27,7 @@ public class FrmFacturasDiaProovedor extends JDialog {
         miModelo.add(LocalDate.ofYearDay(2021, 35),123,"1",21354.5);
         miModelo.add(LocalDate.ofYearDay(2021,35),123,"2",5964.6);
         miModelo.add(LocalDate.ofYearDay(2021, 35),321,"1", 8967.9);
-        miModelo.add(LocalDate.ofYearDay(2021,35),123,"2",9685.8);
+        miModelo.add(LocalDate.ofYearDay(2021,35),321,"2",9685.8);
 
 
     }
