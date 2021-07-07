@@ -1,6 +1,5 @@
 package vista;
 
-import modelo.Documento;
 import utils.GrillaCCProveedor;
 
 import javax.swing.*;
