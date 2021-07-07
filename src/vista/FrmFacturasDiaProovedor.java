@@ -24,10 +24,14 @@ public class FrmFacturasDiaProovedor extends JDialog {
         this.setLocationRelativeTo(null);
         this.self= this;
         tableDiaProveedor.setModel(miModelo);
-        miModelo.add(LocalDate.ofYearDay(2021, 35),123,"1",21354.5);
-        miModelo.add(LocalDate.ofYearDay(2021,35),123,"2",5964.6);
-        miModelo.add(LocalDate.ofYearDay(2021, 35),321,"1", 8967.9);
-        miModelo.add(LocalDate.ofYearDay(2021,35),321,"2",9685.8);
+        miModelo.add(LocalDate.ofYearDay(2021, 35),2039658745,"1",21354.5);
+        miModelo.add(LocalDate.ofYearDay(2021,35),2139688745,"3",5964.6);
+        miModelo.add(LocalDate.ofYearDay(2021, 35),1945698547,"5", 8967.9);
+        miModelo.add(LocalDate.ofYearDay(2021,35),1854214587,"4",9685.8);
+        miModelo.add(LocalDate.ofYearDay(2021, 35),2036365874,"6",26354.5);
+        miModelo.add(LocalDate.ofYearDay(2021,35),2136547895,"7",8964.6);
+        miModelo.add(LocalDate.ofYearDay(2021, 35),1954245874,"4", 6967.9);
+        miModelo.add(LocalDate.ofYearDay(2021,35),2136547895,"6",15585.8);
 
 
     }

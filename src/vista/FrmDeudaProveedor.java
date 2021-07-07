@@ -21,10 +21,15 @@ public class FrmDeudaProveedor extends JDialog {
         this.setLocationRelativeTo(null);
         this.self= this;
         tableDeudaproveedor.setModel(miModelo);
-        miModelo.add(123,12354.65);
-        miModelo.add(321, 84512.85);
-        /*miModelo.add(LocalDate.ofYearDay(2021, 35),321,"1", 8967.9);
-        miModelo.add(LocalDate.ofYearDay(2021,35),321,"2",9685.8);*/
+        miModelo.add(2036587452,12354.65);
+        miModelo.add(1995478632, 84512.85);
+        miModelo.add(2036985475,19354.65);
+        miModelo.add(2136587459, 74512.85);
+        miModelo.add(1836524587,9354.65);
+        miModelo.add(2036932145, 156512.85);
+        miModelo.add(2134562145,36354.65);
+        miModelo.add(1945621896, 87512.85);
+
 
     }
 }

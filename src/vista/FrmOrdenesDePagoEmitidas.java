@@ -22,10 +22,12 @@ public class FrmOrdenesDePagoEmitidas extends JDialog{
         this.setLocationRelativeTo(null);
         this.self= this;
         tableOrdenPagoEmitida.setModel(miModelo);
-        miModelo.add(123,List.of("F2","F9"),123.2f, FormaPago.CHEQUE);
-        /*miModelo.add(LocalDate.ofYearDay(2021,35),123,"2",5964.6);
-        miModelo.add(LocalDate.ofYearDay(2021, 35),321,"1", 8967.9);
-        miModelo.add(LocalDate.ofYearDay(2021,35),321,"2",9685.8);*/
+        miModelo.add(32587,List.of("A","B","C"),12358.25f, FormaPago.CHEQUE);
+        miModelo.add(32569,List.of("A", "B"),547856.35f,FormaPago.EFECTIVO);
+        miModelo.add(32784,List.of("A"),85478.58f,FormaPago.EFECTIVO);
+        miModelo.add(33658,List.of("A","C"),36525.54f,FormaPago.CHEQUE);
+        miModelo.add(33689,List.of("B","C"),2365478.56f,FormaPago.EFECTIVO);
+        miModelo.add(33758,List.of("A","B"),4785412.45f,FormaPago.CHEQUE);
 
     }
 }
