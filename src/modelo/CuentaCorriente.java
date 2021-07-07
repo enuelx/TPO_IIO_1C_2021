@@ -50,6 +50,11 @@ public class CuentaCorriente extends Persistente{
 		this.setPagosRealizados(pagosRealizados);
 	}
 
+	public CuentaCorriente(int cuit, Double deuda) {
+		this.setProveedor(cuit);
+		this.setDeuda(deuda);
+	}
+
 	/**
 	 * @return
 	 */

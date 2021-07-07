@@ -1,16 +1,16 @@
 package utils;
 
+import modelo.CuentaCorriente;
+
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
 import java.util.List;
-import modelo.CuentaCorriente;
 
-
-public class GrillaCCProveedor extends AbstractTableModel {
+public class GrillaDeudaProveedor extends AbstractTableModel {
     public List<CuentaCorriente> lista = new ArrayList<CuentaCorriente>();
 
-    protected String[] columnNames= new String[] {"Cuit","Deuda","DocRecibidos","DocImpagos","PagosRealizados"};
-    protected Class[] columnClasses = new Class[] {int.class, Double.class, List.class,List.class, Double.class};
+    protected String[] columnNames= new String[] {"Cuit","TotalDeuda"};
+    protected Class[] columnClasses = new Class[] {int.class, Double.class};
 
     public String getColumnName(int col) {return columnNames[col];}
     public Class getColumnClass(int col) {return columnClasses[col];}
@@ -31,16 +31,13 @@ public class GrillaCCProveedor extends AbstractTableModel {
         switch(columnIndex){
             case 0: return lista.get(rowIndex).getProveedor();
             case 1: return lista.get(rowIndex).getDeuda();
-            case 2: return lista.get(rowIndex).getDocRecibidos();
-            case 3: return lista.get(rowIndex).getDocInpagos();
-            case 4: return lista.get(rowIndex).getPagosRealizados();
             default: return null;
         }
 
     }
 
-    public int add(int cuit, Double deuda, List docRecibidos, List docImpagos, Double pagosRealizados){
-        lista.add(new CuentaCorriente(cuit,deuda,docRecibidos,docImpagos,pagosRealizados));
+    public int add(int cuit, Double deuda){
+        lista.add(new CuentaCorriente(cuit,deuda));
         return lista.size() -1;
     }
 
