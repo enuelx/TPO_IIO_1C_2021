@@ -48,6 +48,7 @@ public class FrmConsultasGenerales extends JDialog {
 
             }
         });
+
         compulsaDePreciosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -1,6 +1,7 @@
 package modelo;
 import java.util.*;
 import enums.TipoIVA;
+import modelo.Proveedor;
 /**
  * 
  */
@@ -11,13 +12,7 @@ public class ProductoYServicio extends Persistente{
 	 *
 	public ProductoYServicio() {
 	}*/
-	public ProductoYServicio(String codigoItem, Float precioUnidad) {
-		this.precioUnidad=precioUnidad;
-		this.codigoItem=codigoItem;
-		/*
-		this.setCodigoItem(codigoItem);
-		this.setPrecioUnidad(precioUnidad);*/
-	}
+
 
 	/**
 	 * 
@@ -55,7 +50,16 @@ public class ProductoYServicio extends Persistente{
 	public List <ProveedorProductoServicio> productosYServiciosProveedor;
 
 
-
+	public ProductoYServicio(String codigoItem, Float precioUnidad) {
+		this.precioUnidad=precioUnidad;
+		this.codigoItem=codigoItem;
+		/*
+		this.setCodigoItem(codigoItem);
+		this.setPrecioUnidad(precioUnidad);*/
+	}
+	public String toString(){
+		return this.codigoItem;
+	}
 	/**
 	 * @return
 	 */
