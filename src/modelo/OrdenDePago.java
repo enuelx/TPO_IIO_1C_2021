@@ -14,16 +14,25 @@ public class OrdenDePago {
 
 	/**
 	 * Default constructor
-	 */
+
 	public OrdenDePago() {
-	}
+	}*/
 
 	private int numero;
-	private List<Documento> documentosAsociados;
+	private List documentosAsociados;
 	private float montoXCancelar;
 	private FormaPago formaDePago;
 	private Cheque cheque;
 	private Proveedor proveedor;
+
+	public OrdenDePago(int nOrden,List docAsociados, Float monto, FormaPago formaPago) {
+		this.setNumero(nOrden);
+		this.setDocumentosAsociados(docAsociados);
+		this.setMontoXCancelar(monto);
+		this.setFormaDePago(formaPago);
+
+	}
+
 
 	public int getNumero() {
 		return this.numero;
@@ -33,12 +42,12 @@ public class OrdenDePago {
 		this.numero = numero;
 	}
 
-	public List<Documento> getDocumentosAsociados() {
+	public List getDocumentosAsociados() {
 		return this.documentosAsociados;
 	}
 	
-	public void setDocumentosAsociados(Documento value) {
-		this.documentosAsociados.add(value);
+	public void setDocumentosAsociados(List value) {
+		this.documentosAsociados=value;
 	}
 
 	public float getMontoXCancelar() {
@@ -80,4 +89,5 @@ public class OrdenDePago {
 		double iibb = this.proveedor.getIngresosBrutos();
 		return iibb + ganancias + iva;
 	}
+
 }
