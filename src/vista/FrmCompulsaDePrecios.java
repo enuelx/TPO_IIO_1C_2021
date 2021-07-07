@@ -4,6 +4,8 @@ import modelo.PPItem;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -39,6 +41,13 @@ public class FrmCompulsaDePrecios extends JDialog{
         DefaultComboBoxModel model1 = new DefaultComboBoxModel();
         model1.addAll((Collection) productos);
         cbProductosyServicios.setModel(model1);
+
+        cbProductosyServicios.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                
+            }
+        });
     }
 
 }
