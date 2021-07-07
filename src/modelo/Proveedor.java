@@ -100,6 +100,13 @@ public class Proveedor extends Persistente {
 	 */
 	private Double gananciasARetener;
 
+	public Proveedor(int cuit, String nombre, int telefono){
+		this.setCUIT(cuit);
+		this.setNombre(nombre);
+		this.setTelefono(telefono);
+
+	}
+
 
 	/**
 	 * @return

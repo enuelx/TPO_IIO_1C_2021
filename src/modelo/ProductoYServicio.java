@@ -8,8 +8,15 @@ public class ProductoYServicio extends Persistente{
 
 	/**
 	 * Default constructor
-	 */
+	 *
 	public ProductoYServicio() {
+	}*/
+	public ProductoYServicio(String codigoItem, Float precioUnidad) {
+		this.precioUnidad=precioUnidad;
+		this.codigoItem=codigoItem;
+		/*
+		this.setCodigoItem(codigoItem);
+		this.setPrecioUnidad(precioUnidad);*/
 	}
 
 	/**
@@ -47,6 +54,8 @@ public class ProductoYServicio extends Persistente{
 	 */
 	public List <ProveedorProductoServicio> productosYServiciosProveedor;
 
+
+
 	/**
 	 * @return
 	 */
@@ -83,7 +92,7 @@ public class ProductoYServicio extends Persistente{
 	 */
 	public int getTipoUnidad() {
 		// TODO implement here
-		return 0;
+		return this.tipoUnidad;
 	}
 
 	/**
@@ -91,6 +100,7 @@ public class ProductoYServicio extends Persistente{
 	 */
 	public void setTipoUnidad(int value) {
 		// TODO implement here
+		this.tipoUnidad=value;
 	}
 
 	/**
