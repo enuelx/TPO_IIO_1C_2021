@@ -139,7 +139,7 @@ public class Documento {
 	 */
 	public String getCodDocumento() {
 		// TODO implement here
-		return "";
+		return this.codDocumento;
 	}
 
 	/**
@@ -147,6 +147,7 @@ public class Documento {
 	 */
 	public void setCodDocumento(String value) {
 		// TODO implement here
+		this.codDocumento=value;
 	}
 
 	/**
@@ -166,11 +167,22 @@ public class Documento {
 		return null;
 	}
 
+	public Double getMonto(){
+		return this.monto;
+	}
+	/**
+	 * @param value
+	 */
+	public void setMonto (Double value){
+		this.monto=value;
+	}
+
 	/**
 	 * @param value
 	 */
 	public void setLibroIVA(LibroIVA value) {
 		// TODO implement here
+
 	}
 	
 	public void setActivo(boolean value) {
@@ -192,7 +204,10 @@ public class Documento {
 	public int getProveedorCuit() {
 		return this.proveedor.getCUIT();
 	}
-	
+	public void setProveedorCuit(int value)
+	{
+		this.proveedor.setCUIT(value);
+	}
 	public List<ItemDeCompra> getProductos() {
 		return this.productos;
 	}

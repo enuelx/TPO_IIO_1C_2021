@@ -35,7 +35,7 @@ public class LibroIVA {
 	/**
 	 * 
 	 */
-	private List<TipoIVA> tiposDeIva;
+	private TipoIVA tiposDeIva;
 
 	/**
 	 * 
@@ -99,7 +99,7 @@ public class LibroIVA {
 	/**
 	 * @return
 	 */
-	public List<TipoIVA> getTiposDeIva() {
+	public TipoIVA getTiposDeIva() {
 		// TODO implement here
 		return this.tiposDeIva;
 	}
@@ -109,7 +109,7 @@ public class LibroIVA {
 	 */
 	public void setTiposDeIva(TipoIVA value) {
 		// TODO implement here
-		this.tiposDeIva.add(value);
+		this.tiposDeIva=value;
 	}
 
 	/**

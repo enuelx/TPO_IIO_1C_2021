@@ -1,16 +1,23 @@
-/*package utils;
+package utils;
 
+import enums.EspecieDocumento;
+import enums.TipoIVA;
 import modelo.ControllerContable;
 import javax.swing.table.AbstractTableModel;
+import java.text.StringCharacterIterator;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import modelo.LibroIVA;
 
 public class GrillaLibroIva extends AbstractTableModel {
+
+
 
     public List<ControllerContable> lista = new ArrayList<ControllerContable>();
 
     protected String[] columnNames= new String[] {"Cuit Proveedor","Nombre","Fecha","EspecieDoc","IVA","Total"};
-    protected Class[] columnClasses = new Class[] {String.class, String.class, String.class, String.class, String.class, String.class};
+    protected Class[] columnClasses = new Class[] {int.class, String.class, LocalDate.class, EspecieDocumento.class,TipoIVA.class, String.class};
 
     public String getColumnName(int col) {return columnNames[col];}
     public Class getColumnClass(int col) {return columnClasses[col];}
@@ -40,8 +47,8 @@ public class GrillaLibroIva extends AbstractTableModel {
 
     }
 
-    public int add(String cuit, String nombre, String fecha, String especiedoc, String iva, String total ){
-
+    public int add(int cuit, String nombre, LocalDate fecha, EspecieDocumento especiedoc, TipoIVA iva, String total ){
+        lista.add(new ControllerContable(cuit,nombre,fecha,especiedoc,iva,total));
+        return lista.size() -1;
     }
 }
-*/

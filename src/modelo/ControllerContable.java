@@ -1,12 +1,13 @@
 package modelo;
 
+import enums.EspecieDocumento;
 import enums.TipoIVA;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+import modelo.Factura;
 
 /**
  * 
@@ -15,19 +16,31 @@ public class ControllerContable {
 
 	/**
 	 * Default constructor
-	 */
 	public ControllerContable() {
-	}
+	}*/
 
 	//Parametros
 	
 	private ArrayList<OrdenDePago> ordenesDePago = new ArrayList <OrdenDePago>() ;
 	
 	private ArrayList<Factura> facturas = new ArrayList <Factura>() ; //agregar repositorio
-	
-	
+	private int cuit;
+	private String nombre;
+	private LocalDate fecha;
+	private EspecieDocumento especiedoc;
+	private TipoIVA iva;
+	private String total;
 
-	
+	public ControllerContable(int cuit, String nombre, LocalDate fecha, EspecieDocumento especiedoc, TipoIVA iva, String total) {
+		this.cuit=cuit;
+		this.nombre=nombre;
+		this.fecha=fecha;
+		this.especiedoc=especiedoc;
+		this.iva=iva;
+		this.total=total;
+
+	}
+
 	public void calcularGanancia() {
 		// TODO implement here
 	}
@@ -243,4 +256,34 @@ public void setOrdenesDePago(OrdenDePago value) {
 		// TODO implement here
 	}
 
+	public String getTotales() {
+		return this.total;
+	}
+
+
+	public int getProveedorCuit() {
+		return this.cuit;
+	}
+
+	public String getNombreProveedor() {
+		return this.nombre;
+	}
+
+	public LocalDate getFecha() {
+		return this.fecha;
+	}
+
+	public EspecieDocumento getEspecieDoc() {
+		return this.especiedoc;
+	}
+
+	public TipoIVA getIVA() {
+		return this.iva;
+	}
+
+
+	public String getNumeroFactura() {
+		Factura factura = new Factura();
+		return factura.getCodDocumento();
+	}
 }

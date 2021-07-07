@@ -12,8 +12,9 @@ public class App {
         p1.setCUIT(123);
         System.out.println(p1.getRubros());
         System.out.println(p1.getCUIT());
-        ControllerContable usuario = new ControllerContable();
-        usuario.reporteDeCuenta(0);
-        usuario.totalDeudaPorProveedor();
+        /*
+        ControllerContable mi = new ControllerContable();
+        mi.reporteDeCuenta(0);
+        mi.totalDeudaPorProveedor();*/
     }
 }

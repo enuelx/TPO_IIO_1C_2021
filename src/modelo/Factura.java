@@ -1,4 +1,5 @@
 package modelo;
+import java.time.LocalDate;
 import java.util.*;
 
 import enums.EspecieDocumento;
@@ -18,6 +19,13 @@ public class Factura extends Documento {
 	 * 
 	 */
 	private OrdenDeCompra ordenCompra;
+
+	public Factura(LocalDate fechaEmision, int cuit, String factura, Double monto) {
+		this.setFechaEmision(fechaEmision);
+		this.setProveedorCuit(cuit);
+		this.setCodDocumento(factura);
+		this.setMonto(monto);
+	}
 
 	/**
 	 * @return
