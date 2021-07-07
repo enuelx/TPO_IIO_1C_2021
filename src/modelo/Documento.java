@@ -34,7 +34,7 @@ public class Documento {
 	/**
 	 * 
 	 */
-	private Proveedor proveedor;
+	private int proveedor;
 
 	/**
 	 * 
@@ -193,21 +193,21 @@ public class Documento {
 		return this.activo;
 	}
 	
-	public void setProveedor(Proveedor value) {
+	public void setProveedor(int value) {
 		this.proveedor = value;
 	}
 	
-	public Proveedor getProveedor() {
+	public int getProveedor() {
 		return this.proveedor;
 	}
-	
+	/*
 	public int getProveedorCuit() {
 		return this.proveedor.getCUIT();
 	}
 	public void setProveedorCuit(int value)
 	{
 		this.proveedor.setCUIT(value);
-	}
+	}*/
 	public List<ItemDeCompra> getProductos() {
 		return this.productos;
 	}

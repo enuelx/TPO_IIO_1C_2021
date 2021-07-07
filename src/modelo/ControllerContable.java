@@ -165,7 +165,7 @@ public class ControllerContable {
 				fact=facturas.get(i);
 				fact.getLibroIVA();
 				fact.getCuitProveedorCompra();
-				libro.setCuit(fact.getProveedorCuit());
+				libro.setCuit(fact.getProveedor());
 				prov.getNombre();
 				libro.setNombreProveedor(prov.getNombre());
 				libro.setFecha(ld); 

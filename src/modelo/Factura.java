@@ -22,7 +22,7 @@ public class Factura extends Documento {
 
 	public Factura(LocalDate fechaEmision, int cuit, String factura, Double monto) {
 		this.setFechaEmision(fechaEmision);
-		this.setProveedorCuit(cuit);
+		this.setProveedor(cuit);
 		this.setCodDocumento(factura);
 		this.setMonto(monto);
 	}
@@ -46,7 +46,7 @@ public class Factura extends Documento {
 	 * @return
 	 */
 	public int obtenerProveedorCuit() {
-		return this.getProveedorCuit();
+		return this.getProveedor();
 	}
 
 	/**
